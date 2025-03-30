@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lámparas Personalizadas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lámparas Personalizadas</h1>
+    
+    <form id="uploadForm" action="https://api.cloudinary.com/v1_1/tu_nombre_de_usuario/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput" required>
+        <input type="hidden" name="upload_preset" value="tu_preset_de_upload">
+        <button type="submit">Subir Foto</button>
+    </form>
+    
+    <h2>Selecciona el Diseño</h2>
+    <button onclick="selectDesign('Diseño 1', 50)">Diseño 1</button>
+    <button onclick="selectDesign('Diseño 2', 75)">Diseño 2</button>
+
+    <h2>Precio: <span id="price">0</span> USD</h2>
+
+    <h2>Confirmación de Pedido</h2>
+    <button onclick="confirmOrder()">Confirmar Pedido</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
