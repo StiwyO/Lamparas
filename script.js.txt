@@ -1,14 +1,7 @@
-let price = 0;
-let selectedDesign = '';
-
-function selectDesign(design, priceValue) {
-    selectedDesign = design;
-    price = priceValue;
-    document.getElementById('price').innerText = price;
+function selectDesign(design, price) {
+    document.getElementById("price").textContent = price;
 }
 
 function confirmOrder() {
-    let orderDetails = `Pedido de lámpara:\nDiseño: ${selectedDesign}\nPrecio: ${price} USD\n\nPor favor, realice el pago a través de Zelle al número 123-456-7890.`;
-    const whatsappMessage = `https://wa.me/1234567890?text=${encodeURIComponent(orderDetails)}`;
-    window.open(whatsappMessage, '_blank');
+    alert("¡Pedido confirmado!");
 }
